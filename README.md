@@ -169,7 +169,7 @@ SITUACAO-PROBLEMA-3.0/
 ---
 
 <div align="center">
-  <p style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+  <p style="display: flex; align-items: center; justify-content: center;">
     By Felipe <img src="public/assets/icon/bear.svg" width="32" height="32" style="vertical-align: middle;"> Vieira
   </p>   
   <p>
