@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirecionar todas as requisições para a pasta public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Se o arquivo ou diretório não existir na pasta public
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^public/(.*)$ public/index.php [L]
+
+# Permitir acesso aos arquivos PHP
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Configurações de CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"
