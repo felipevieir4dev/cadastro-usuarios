@@ -137,7 +137,7 @@ tr:hover {
 }
 
 .btn-footer {
-    padding: 25px 35px;
+    padding: 20px;
     background-color: #9370db;
     color: white;
     border-radius: 30px;
@@ -145,50 +145,15 @@ tr:hover {
     text-decoration: none;
     position: fixed;
     right: 8px;
-    bottom: 70px;
-    font-size: xx-large;
+    bottom: 20px;
+    font-size: x-large;
 }
 
 .btn-footer:hover {
     background-color: #8a2be2;
-    outline: 2px solid #9370db;
-    outline-offset: 2px;
-}
-
-.btn-footer:focus,
-.btn-footer:focus-visible {
-    outline: 2px solid #4b0082;
-    outline-offset: 2px;
-}
-
-.btn-limpar {
-    background-color: #ff1493;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    display: block;
-    margin-left: auto;
-}
-
-.btn-limpar:hover {
-    background-color: #ff69b4;
+    box-shadow: 0 4px 15px rgba(147, 112, 219, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.2);
-}
-
-.btn-limpar:active {
-    transform: translateY(0);
-}
-
-.btn-limpar:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.3);
 }
 
 @media screen and (max-width: 1024px) {
@@ -241,12 +206,7 @@ tr:hover {
     }
 
     .btn-footer {
-        padding: 12px 20px;
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
         bottom: 70px;
-        width: fit-content;
     }
 }
 

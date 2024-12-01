@@ -7,6 +7,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// Adiciona o header para pular o aviso do ngrok
+header('ngrok-skip-browser-warning: true');
+
 // Incluir o arquivo de configuração
 require_once BASE_DIR . '/config/config.php';
 

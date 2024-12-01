@@ -9,6 +9,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
+header('ngrok-skip-browser-warning: true');
 
 // Em caso de requisição OPTIONS (preflight), retornar apenas os headers
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {

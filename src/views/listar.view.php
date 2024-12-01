@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="User-Agent" content="Custom-User-Agent">
     <title>Lista de Usuários Cadastrados</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,13 +59,14 @@
 
     <script>
         function confirmarLimpeza() {
-            if (confirm('Tem certeza que deseja limpar todos os registros? Esta ação não pode ser desfeita.')) {
+            if (confirm('Tem certeza que deseja limpar todos os registros?')) {
                 limparRegistros();
             }
         }
 
         function limparRegistros() {
-            fetch('/src/limpar.php', {
+            if (confirm('Tem certeza que deseja limpar todos os registros?')) {
+                fetch('/src/limpar.php', {
                     method: 'POST'
                 })
                 .then(response => response.json())
@@ -90,8 +92,10 @@
                     mensagemElement.textContent = 'Erro ao processar a requisição';
                     console.error('Erro:', error);
                 });
+            }
         }
     </script>
+    <script src="/assets/js/ngrok-header.js"></script>
 </body>
 
 </html>

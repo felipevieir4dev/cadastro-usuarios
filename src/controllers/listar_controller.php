@@ -1,4 +1,5 @@
 <?php
+header('ngrok-skip-browser-warning: true');
 require_once __DIR__ . '/../../config/config.php';
 
 try {
