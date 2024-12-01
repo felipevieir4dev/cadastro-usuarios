@@ -173,8 +173,6 @@ SITUACAO-PROBLEMA-3.0/
     By <a href="https://github.com/felipevieir4dev">Felipe <img src="public/assets/icon/bear.png" width="32" height="32" style="vertical-align: middle;"> Vieira</a>
   </p>
   <p>
-    <a href="https://github.com/felipevieir4dev">
       <img src="https://img.shields.io/badge/GitHub-felipevieir4dev-4B0082?style=for-the-badge&logo=github" alt="GitHub">
-    </a>
   </p>
 </div>
