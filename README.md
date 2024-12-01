@@ -170,7 +170,7 @@ SITUACAO-PROBLEMA-3.0/
 
 <div align="center">
   <p>
-    By Felipe <img src="public/assets/icon/bear.svg" width="32" height="32" style="vertical-align: middle;"> Vieira
+    By Felipe <img src="public/assets/icon/bear.png" width="32" height="32" style="vertical-align: middle;"> Vieira
   </p>   
   <p>
     <a href="https://github.com/felipevieir4dev">
