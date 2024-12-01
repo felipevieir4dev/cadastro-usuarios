@@ -1,14 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirecionar todas as requisições para a pasta public
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ public/$1 [L]
-
-# Se o arquivo ou diretório não existir na pasta public
+# Se o arquivo ou diretório não existir
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^public/(.*)$ public/index.php [L]
+RewriteRule ^(.*)$ index.php [L]
 
 # Permitir acesso aos arquivos PHP
 <FilesMatch "\.php$">
