@@ -165,7 +165,3 @@ SITUACAO-PROBLEMA-3.0/
 - email (VARCHAR(255), NOT NULL, UNIQUE)
 - senha (VARCHAR(255), NOT NULL)
 - data_cadastro (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
-
-## Licença
-
-Este projeto está sob a licença MIT.
