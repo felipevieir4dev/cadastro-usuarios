@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="User-Agent" content="Custom-User-Agent">
     <title>Lista de Usuários Cadastrados</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +38,7 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <button id="limparRegistros" class="btn-limpar" onclick="confirmarLimpeza()">Limpar Registros</button>
+                <button id="limparRegistros" class="btn-limpar">Limpar Registros</button>
             </div>
         <?php else: ?>
             <div class="sem-registros" role="alert">Nenhum usuário cadastrado ainda.</div>
@@ -58,44 +57,34 @@
     </footer>
 
     <script>
-        function confirmarLimpeza() {
-            if (confirm('Tem certeza que deseja limpar todos os registros?')) {
-                limparRegistros();
-            }
-        }
-
-        function limparRegistros() {
-            if (confirm('Tem certeza que deseja limpar todos os registros?')) {
-                fetch('/src/limpar.php', {
-                    method: 'POST'
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const mensagemElement = document.getElementById('mensagem');
-
-                    if (data.status === 'success') {
-                        mensagemElement.className = 'mensagem sucesso';
-                        mensagemElement.textContent = data.message;
-
-                        // Recarrega a página após 1.5 segundos
-                        setTimeout(() => {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('limparRegistros').addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Tem certeza que deseja limpar todos os registros?')) {
+                    fetch('/limpar', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            alert('Registros limpos com sucesso!');
                             window.location.reload();
-                        }, 1500);
-                    } else {
-                        mensagemElement.className = 'mensagem erro';
-                        mensagemElement.textContent = data.message;
-                    }
-                })
-                .catch(error => {
-                    const mensagemElement = document.getElementById('mensagem');
-                    mensagemElement.className = 'mensagem erro';
-                    mensagemElement.textContent = 'Erro ao processar a requisição';
-                    console.error('Erro:', error);
-                });
-            }
-        }
+                        } else {
+                            alert('Erro ao limpar registros: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Erro ao processar a requisição');
+                    });
+                }
+            });
+        });
     </script>
-    <script src="/assets/js/ngrok-header.js"></script>
+
 </body>
 
 </html>

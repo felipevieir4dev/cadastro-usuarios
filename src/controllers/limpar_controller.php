@@ -1,5 +1,8 @@
 <?php
+header('Content-Type: application/json');
 require_once __DIR__ . '/../../config/config.php';
+
+$response = array();
 
 try {
     // Verificar conexão com o banco
@@ -11,12 +14,13 @@ try {
     $stmt = $pdo->prepare("TRUNCATE TABLE usuarios");
     $stmt->execute();
     
-    // Redirecionar para a página de listagem
-    header('Location: /listar');
-    exit;
+    $response['status'] = 'success';
+    $response['message'] = 'Registros limpos com sucesso!';
     
 } catch (Exception $e) {
     error_log("Erro ao limpar registros: " . $e->getMessage());
-    header('Location: /listar?erro=' . urlencode($e->getMessage()));
-    exit;
+    $response['status'] = 'error';
+    $response['message'] = $e->getMessage();
 }
+
+echo json_encode($response);

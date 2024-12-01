@@ -156,6 +156,32 @@ tr:hover {
     transform: translateY(-2px);
 }
 
+.btn-limpar {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-limpar:hover {
+    background-color: #ff69b4;
+}
+
+.btn-limpar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.3);
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         max-width: 90%;
