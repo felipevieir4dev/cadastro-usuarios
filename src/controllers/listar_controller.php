@@ -2,6 +2,8 @@
 header('ngrok-skip-browser-warning: true');
 require_once __DIR__ . '/../../config/config.php';
 
+$erro = null;
+
 try {
     // Verificar conexão com o banco
     if (!isset($pdo)) {

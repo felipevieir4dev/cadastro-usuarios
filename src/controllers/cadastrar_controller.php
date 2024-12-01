@@ -50,6 +50,10 @@ try {
             throw new Exception("Todos os campos são obrigatórios!");
         }
 
+        if (strlen($nome) < 3) {
+            throw new Exception("Nome deve ter no mínimo 3 caracteres!");
+        }
+
         if (strlen($nome) > 100) {
             throw new Exception("Nome deve ter no máximo 100 caracteres!");
         }

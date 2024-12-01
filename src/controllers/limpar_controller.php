@@ -1,8 +1,14 @@
 <?php
 header('Content-Type: application/json');
 require_once __DIR__ . '/../../config/config.php';
-
 $response = array();
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    $response['status'] = 'error';
+    $response['message'] = 'Método não permitido';
+    echo json_encode($response);
+    exit;
+}
 
 try {
     // Verificar conexão com o banco
