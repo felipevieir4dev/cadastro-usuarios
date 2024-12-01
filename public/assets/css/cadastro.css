@@ -176,7 +176,7 @@ button:hover {
 }
 
 .btn-footer {
-    padding: 20px;
+    padding: 25px 35px;
     background-color: #9370db;
     color: white;
     border-radius: 30px;
@@ -184,14 +184,14 @@ button:hover {
     text-decoration: none;
     position: fixed;
     right: 8px;
-    bottom: 20px;
+    bottom: 70px;
+    font-size: xx-large;
 }
 
 .btn-footer:hover {
     background-color: #8a2be2;
-    color: white;
-    box-shadow: 0 4px 15px rgba(147, 112, 219, 0.2);
-    transform: translateY(-2px);
+    outline: 2px solid #9370db;
+    outline-offset: 2px;
 }
 
 .password-container {
