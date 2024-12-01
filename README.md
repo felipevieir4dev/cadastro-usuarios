@@ -165,3 +165,16 @@ SITUACAO-PROBLEMA-3.0/
 - email (VARCHAR(255), NOT NULL, UNIQUE)
 - senha (VARCHAR(255), NOT NULL)
 - data_cadastro (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
+
+---
+
+<div align="center">
+  <p>
+    By <a href="https://github.com/felipevieir4dev">Felipe <img src="public/assets/icon/bear.png" width="32" height="32" style="vertical-align: middle;"> Vieira</a>
+  </p>
+  <p>
+    <a href="https://github.com/felipevieir4dev">
+      <img src="https://img.shields.io/badge/GitHub-felipevieir4dev-4B0082?style=for-the-badge&logo=github" alt="GitHub">
+    </a>
+  </p>
+</div>

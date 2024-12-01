@@ -70,7 +70,7 @@
 
     <footer class="footer">
         <div class="footer-link">
-            Desenvolvido por <a href="https://github.com/felipevieir4dev" target="_blank">Felipe Vieira</a>
+            By <a href="https://github.com/felipevieir4dev" target="_blank">Felipe <img src="/assets/icon/bear.png" alt="Urso"> Vieira</a>
         </div>
         <a href="/listar" class="btn-footer">Ver Cadastros</a>
     </footer>
