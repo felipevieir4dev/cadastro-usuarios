@@ -170,7 +170,7 @@ SITUACAO-PROBLEMA-3.0/
 
 <div align="center">
   <p>
-    By Felipe <img src="public/assets/icon/bear.png" width="32" height="32";"> Vieira
+    By Felipe <img src="public/assets/icon/bear.png" width="32" height="32";vertical-align="baseline"> Vieira
   </p>
   <p>
       <img src="https://img.shields.io/badge/GitHub-felipevieir4dev-4B0082?style=for-the-badge&logo=github" alt="GitHub">
